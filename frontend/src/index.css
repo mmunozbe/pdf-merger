@@ -1,0 +1,262 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Fondo elegante y minimalista */
+body {
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal */
+.app-container {
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Títulos */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Botón de acción */
+.action-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.action-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para subir archivos */
+.file-upload-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-upload-container input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  background-color: #444;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.file-label:hover {
+  background-color: #666;
+}
+
+/* Lista de archivos cargados */
+.uploaded-files {
+  margin-top: 15px;
+}
+
+.uploaded-files p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #ddd;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.file-list li {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+/* Elementos reordenables */
+.sortable-item {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #444;
+  /* Borde más oscuro */
+  border-radius: 5px;
+  background: linear-gradient(135deg, #2c2c2c, #3e3e3e);
+  /* Fondo degradado */
+  color: #fff;
+  /* Texto blanco */
+  cursor: grab;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sortable-item:hover {
+  background: linear-gradient(135deg, #3e3e3e, #4f4f4f);
+  /* Cambio de degradado al pasar el mouse */
+  transform: scale(1.02);
+  /* Efecto de zoom */
+}
+
+/* Checkbox con etiqueta alineada */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+/* Mensaje de amor */
+.love-message {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 15px;
+  color: #ff79c6;
+}
+
+/* Estilo para las entradas */
+.styled-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #aaa;
+  /* Borde más claro */
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #555;
+  /* Fondo más claro */
+  color: white;
+  /* Texto blanco */
+}
+
+.styled-input:focus {
+  outline: none;
+  border-color: #007bff;
+  /* Azul al enfocar */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para entradas numéricas */
+.styled-input.number-input {
+  width: 50%;
+  /* Reducir el ancho */
+  max-width: 150px;
+  /* Limitar el tamaño máximo */
+  text-align: center;
+  /* Centrar el texto */
+  background-color: #444;
+  /* Fondo oscuro */
+  color: white;
+  /* Texto blanco */
+  border: 1px solid #555;
+  /* Borde oscuro */
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.styled-input.number-input:focus {
+  outline: none;
+  border-color: #007bff;
+  /* Azul al enfocar */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para desplegables */
+select.styled-input {
+  background-color: #444;
+  /* Fondo oscuro */
+  color: white;
+  /* Texto blanco */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+select.styled-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para las opciones del desplegable */
+select.styled-input option {
+  background-color: #444;
+  /* Fondo oscuro */
+  color: white;
+  /* Texto blanco */
+}
+
+/* Estilo para las secciones de división */
+.split-section {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #aaa;
+  /* Borde más claro */
+  border-radius: 5px;
+  background-color: #3a3a3a;
+  /* Fondo más claro */
+  color: white;
+  /* Texto blanco */
+}
+
+/* Estilo para las etiquetas dentro de las secciones */
+.split-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #eee;
+  /* Texto más claro */
+}
+
+/* Estilo para las casillas desplegables */
+.split-section .styled-input {
+  background-color: #444;
+  /* Fondo oscuro */
+  color: white;
+  /* Texto blanco */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.split-section .styled-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
